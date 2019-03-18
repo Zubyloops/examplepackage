@@ -9,6 +9,6 @@ setup(
     long_description=open('README.md').read(),
     install_requires=['numpy'],
     url='https://github.com/Zubyloops/mypackage',
-    author='zubyloops',
+    author='Zubyloops',
     author_email='zubyloops@gmail.com'
 )

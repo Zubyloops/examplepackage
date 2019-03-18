@@ -1,4 +1,4 @@
-from mypackage import myFunction
+from mypackage import sorting
 
 def test_top_n():
     """
