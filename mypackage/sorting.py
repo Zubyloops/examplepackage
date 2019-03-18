@@ -32,7 +32,8 @@ def bubble_sort(items):
     Return array of items, sorted in ascending order
 
     Args:
-        items (array): list or array-like object containing numerical values.
+        items (array): list or array-like object containing numerical or
+        string values .
 
     Returns:
         array: returns array sorted in ascending by bubbling items.
@@ -51,6 +52,24 @@ def bubble_sort(items):
     return bubbled_list
 
 def merge(list1, list2):
+
+    '''
+    Given an ordered 2 list ,Returns 1 array of items, sorted in ascending order
+
+    Args:
+        list1,list2 (array): list or array-like object containing numerical or
+        string or values.
+
+    Returns:
+        array: returns
+
+    Examples:
+        >>> merge_sort([1,2,3].[3,5])
+        [1, 2, 3, 4, 5]
+        >>> merge_sort([5] ,[3])
+        [4, 6, 6, 8, 10, 23, 82]
+    '''
+
     merge_list = []
     while len(list1) > 0 and len(list2) > 0:
         if list1[0] < list2[0]:
@@ -67,6 +86,25 @@ def merge(list1, list2):
     return merge_list
 
 def merge_sort(items):
+    '''
+    Return array of items, sorted in ascending order
+
+    Args:
+        items (array): list or array-like object containing numerical or string
+        or values.
+
+    Returns:
+        array: returns array sorted in ascending order by recusively splitting
+        the array in half and passing it to the merge function that returns a merged
+        sorted list.
+
+    Examples:
+        >>> merge_sort([1,2,3,6,5,4])
+        [1, 2, 3, 4, 5, 6]
+        >>> merge_sort([10,6,6,8,4,23,82])
+        [4, 6, 6, 8, 10, 23, 82]
+
+  '''
 
     list_len = len(items)
 
