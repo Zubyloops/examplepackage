@@ -1,5 +1,3 @@
-from . import sorting
-
 from mypackage import myFunction
 
 def test_top_n():
