@@ -7,7 +7,7 @@ def test_merge():
     '''
     assert myFunction.merge([1,2,3],[3,5]) == [1, 2, 3, 3, 5], 'incorrect'
     assert myFunction.merge([5],[3]) == [3, 5], 'incorrect'
-    assert myFunction.merge(['abc','k'],['dd','xyz']) = [
+    assert myFunction.merge(['abc','k'],['dd','xyz']) == [
     'abc', 'dd', 'k', 'xyz'],'incorrect'
 
 def test_merge_sort():
@@ -19,7 +19,7 @@ def test_merge_sort():
     assert myFunction.merge_sort([10,6,6,8,4,23,82]) == [
     4, 6, 6, 8, 10, 23, 82], 'incorrect'
     assert myFunction.merge_sort(['word','abc','xyz','something']) == [
-    'abc', 'something', 'word', 'xyz'] 'incorrect'
+    'abc', 'something', 'word', 'xyz'], 'incorrect'
 
 def test_quick_sort():
     '''
