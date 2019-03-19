@@ -43,16 +43,16 @@ def fibonacci(n):
     '''
 
     if n == 0 or n == 1:
-        return 1
+        return n
     return fibonacci(n-1) + fibonacci(n-2)
 
 def factorial(n):
 
     '''
-    Return n!
+    Return n! from non-negative interger number
 
     Args:
-        n (int): interger number to calculate the factorial of.
+        n (int): non-negative interger number to calculate the factorial of.
 
     Returns:
         int: n! is the number we get when we multiply every number from 1 to 𝑛.
@@ -63,9 +63,10 @@ def factorial(n):
         >>> fibonacci(5)
         120
     '''
-
-    if n == 0 or n == 1:
-        return n
+    if type(n) != int or n <0:
+        return "Please input non-negative intergers only"
+    elif n == 0 or n == 1:
+        return 1
     return n * factorial(n-1)
 
 def reverse(word):
