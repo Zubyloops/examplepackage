@@ -36,14 +36,14 @@ def fibonacci(n):
     Examples:
         >>> fibonacci(1)
         1
-        >> fibonacci(2)
+        >>> fibonacci(2)
         1
-        >> fibonacci(7)
+        >>> fibonacci(7)
         13
     '''
 
     if n == 0 or n == 1:
-        return n
+        return 1
     return fibonacci(n-1) + fibonacci(n-2)
 
 def factorial(n):
