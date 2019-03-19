@@ -1,19 +1,22 @@
 def sum_array(array):
-     '''
-     Return sum of all items in array
+    '''
+    Return sum of all items in array
 
-     Args:
-         items (array): list or array-like object containing numerical values.
+    Args:
+         items (array): list or array-like object containing numerical values
+         or string not both.
 
 
-     Returns:
-         int: sum of all items in array.
+    Returns:
+         int or float or string (depending if all items is the same type): sum of all
+         items in array.
 
-     Examples:
+    Examples:
          >>> sum_array([1,2,3,4])
          10
-     '''
-
+         >>> sum_array('a','bb')
+         'abb'
+    '''
     if len(array) == 1:
         return array[0]
     return array[0] + sum_array(array[1:])

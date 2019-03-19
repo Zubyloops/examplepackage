@@ -1,31 +1,3 @@
-def top_n(items, n):
-    """
-    Return the top n items in an array, in descending order.
-
-    Args:
-        items (array): list or array-like object containing numerical values.
-        n (int): number of top items to return.
-
-    Returns:
-        array: top n items, in descending order.
-
-    Examples:
-        >>> top_n([8, 3, 2, 7, 4], 3)
-        [8, 7, 3]
-    """
-
-    for i in range(n):  # keep sorting until we have the top n items
-        for j in range(len(items)-1-i):
-
-            if items[j] > items[j+1]:  # if this item is bigger than next item.
-                items[j], items[j+1] = items[j+1], items[j]  # swap the two!
-
-    # get last two items
-    top_n = items[-n:]
-
-    # return in descending order
-    return top_n[::-1]
-
 def bubble_sort(items):
 
     '''
@@ -41,7 +13,8 @@ def bubble_sort(items):
     Examples:
         >>> bubble_sort([5, 1 ,4, 2 ,8 ])
         [1, 2, 4, 5, 8]
-
+        >>> bubble_sort(['a', 'x', 'c'])
+        ['a', 'c', 'x']
     '''
 
     l_copy = items.copy() # in place protection on items
@@ -59,7 +32,7 @@ def merge(list1, list2):
 
     Args:
         list1,list2 (array): list or array-like object containing numerical or
-        string or values.
+        string values.
 
     Returns:
         array: returns singular array of the two lists merged in ascending
@@ -85,7 +58,7 @@ def merge(list1, list2):
     # extends the remaining item to the merged list depending on length of list
     if len(list1) == 0:
         merge_list.extend(list2)
-    if len(list2) == 0
+    if len(list2) == 0:
         merge_list.extend(list1)
 
     # returns merged list in ascending order
@@ -97,7 +70,7 @@ def merge_sort(items):
 
     Args:
         items (array): list or array-like object containing numerical or string
-        or values.
+        values.
 
     Returns:
         array: returns array sorted in ascending order by recusively splitting
@@ -119,8 +92,8 @@ def merge_sort(items):
         return items
 
     mid_point = int(list_len / 2) # index of the mid point of array
-    half1 = merge_sort(items[:mid_point]) # recusively halfs array to eventually
-    half2 = merge_sort(items[mid_point:]) # get 2 sublists of 1 item
+    half1 = merge_sort(items[:mid_point]) # recusively halves array to
+    half2 = merge_sort(items[mid_point:]) # eventually get 2 sublists of 1 item
 
     # inputs the 2 sublists in the function to be merged in ascending order
     return merge(half1, half2)
@@ -171,5 +144,5 @@ def quick_sort(items):
     large = quick_sort(large)
 
     # returns a joined list by adding the small, pivot and large list together
-    # reppectively
+    # respectively
     return small + dup + large
